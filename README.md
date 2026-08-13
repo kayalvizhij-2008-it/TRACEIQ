@@ -1,56 +1,42 @@
 # TRACEIQ — CASEGRAPH
 
-### Connect the Evidence. Reconstruct the Truth.
+> "Connect the Evidence. Reconstruct the Truth."
 
-> **AI RECOMMENDS. EVIDENCE SUPPORTS. HUMANS DECIDE.**
+**Problem:** Agentic Child Protection Investigation Assistant (ACPIA)
 
-TRACEIQ is an AI-powered investigation intelligence platform designed to help authorized investigators transform fragmented digital evidence into connected, explainable case intelligence.
+TRACEIQ is an evidence-grounded investigation intelligence platform that transforms fragmented digital evidence into connected, explainable case intelligence.
 
-Instead of treating evidence as isolated files, TRACEIQ builds a dynamic **CaseGraph** that connects entities, devices, evidence, locations, events, metadata, and relationships — helping investigators identify patterns, reconstruct timelines, prioritize leads, and generate investigation-ready briefs.
+## Solution Flow
 
----
+ANALYZE → CORRELATE → FUSE → RECONSTRUCT → PRIORITIZE → REPORT
 
-## 🚨 The Problem
+## Key Features
+- **Cinematic Evidence Vault:** Ingest synthetic digital evidence via a secure, simulated 9-step processing pipeline.
+- **Interactive CaseGraph:** Real-time visual reconstruction of relationships between accounts, devices, locations, and events using React Flow.
+- **Priority Leads & Copilot:** Automated risk signal detection and natural-language case querying grounded in the CaseGraph.
+- **Judge Demo Mode:** A one-click automated sequence demonstrating the entire intelligence lifecycle from ingestion to final report.
 
-Digital investigations can involve hundreds of files originating from different sources and formats.
+## Technology Stack
+- React 18 + Vite
+- TypeScript
+- `@xyflow/react` for CaseGraph
+- `framer-motion` for complex UI animation and cinematic reveals
+- `lucide-react` for iconography
+- Vanilla CSS with a strict forensic design system (Black, Charcoal, Graphite, Electric Violet, Acid Lime)
 
-The challenge isn't simply finding evidence.
+## Architecture
+The application runs entirely on the client side for demonstration purposes. Evidence ingestion and processing simulate a highly secure backend agentic pipeline (Evidence Agent, Pattern Agent, Correlation Agent).
 
-### The real challenge is finding the connections between the evidence.
+> **Disclaimer:** All data utilized and displayed within this application is purely synthetic. No real victim, child, or offender data is exposed, processed, or stored.
 
-Investigators may need to:
+## Setup Instructions
+```bash
+npm install
+npm run dev
+```
 
-- Analyze large volumes of digital evidence
-- Identify potentially relevant information
-- Correlate information across multiple sources
-- Extract entities and metadata
-- Reconstruct event timelines
-- Identify suspicious or high-priority patterns
-- Connect related evidence
-- Retrieve information quickly
-- Generate investigation reports
-
-When these activities are fragmented across manual workflows, valuable investigative time can be lost.
-
----
-
-# 💡 Our Solution
-
-## TRACEIQ
-
-TRACEIQ transforms fragmented evidence into a connected investigation workflow:
-
-```text
-EVIDENCE
-    ↓
-ANALYZE
-    ↓
-CORRELATE
-    ↓
-FUSE
-    ↓
-RECONSTRUCT
-    ↓
-PRIORITIZE
-    ↓
-REPORT
+## Running the Judge Demo
+1. Open the application.
+2. Click **ENTER CASEGRAPH**.
+3. In the Command Center, click **RUN JUDGE DEMO**.
+4. Observe the automated ingestion, correlation, and CaseGraph expansion sequence.
