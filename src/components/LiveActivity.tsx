@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Components.css';
 
 interface LiveActivityProps {
-  activities: { id: string, time: string, text: string }[];
+  activities: { id: string; time: string; text: string }[];
 }
 
 const LiveActivity: React.FC<LiveActivityProps> = ({ activities }) => {
@@ -11,7 +11,7 @@ const LiveActivity: React.FC<LiveActivityProps> = ({ activities }) => {
     <div className="sidebar-section live-activity">
       <div className="flex-between" style={{ marginBottom: 'var(--spacing-3)' }}>
         <h3 className="section-title" style={{ marginBottom: 0 }}>Investigation Activity</h3>
-        <span className="status-live" style={{ fontSize: '0.65rem' }}>● LIVE</span>
+        <span className="status-live" style={{ fontSize: '0.65rem' }}>● LIVE LOG</span>
       </div>
       
       <div className="activity-list">
@@ -19,8 +19,10 @@ const LiveActivity: React.FC<LiveActivityProps> = ({ activities }) => {
           {activities.map((activity) => (
             <motion.div 
               key={activity.id}
-              initial={{ opacity: 0, x: -20, height: 0 }}
+              initial={{ opacity: 0, x: -15, height: 0 }}
               animate={{ opacity: 1, x: 0, height: 'auto' }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
               className="activity-item"
             >
               <div className="activity-time">{activity.time}</div>

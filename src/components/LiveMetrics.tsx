@@ -1,6 +1,6 @@
 import React from 'react';
-import './Components.css';
 import { motion } from 'framer-motion';
+import './Components.css';
 
 interface MetricsProps {
   metrics: {
@@ -15,13 +15,13 @@ interface MetricsProps {
 const LiveMetrics: React.FC<MetricsProps> = ({ metrics }) => {
   return (
     <div className="sidebar-section live-metrics">
-      <h3 className="section-title">Live Metrics</h3>
+      <h3 className="section-title">Case Metrics</h3>
       <div className="metrics-grid">
         <MetricBox label="EVIDENCE" value={metrics.evidence} />
         <MetricBox label="ENTITIES" value={metrics.entities} />
         <MetricBox label="RELATIONS" value={metrics.relationships} />
         <MetricBox label="EVENTS" value={metrics.timelineEvents} />
-        <MetricBox label="LEADS" value={metrics.priorityLeads} highlight />
+        <MetricBox label="PRIORITY LEADS" value={metrics.priorityLeads} highlight />
       </div>
     </div>
   );
@@ -31,9 +31,9 @@ const MetricBox = ({ label, value, highlight = false }: { label: string, value: 
   <div className={`metric-box ${highlight ? 'highlight' : ''}`}>
     <motion.div 
       key={value}
-      initial={{ scale: 1.2, color: 'var(--color-electric-violet)' }}
+      initial={{ scale: 1.2, color: 'var(--color-acid-lime)' }}
       animate={{ scale: 1, color: highlight ? 'var(--color-amber)' : 'var(--color-warm-ivory)' }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
       className="metric-value"
     >
       {value.toString().padStart(2, '0')}
